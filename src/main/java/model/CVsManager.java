@@ -22,7 +22,7 @@ public class CVsManager {
     public CVsManager(ArrayList<CV> cvs) {
 
         this.cvs=new ArrayList<CV>();
-        this.setListCV(cvs);
+        this.setcvs(cvs);
     }
 
     public CVsManager() {
@@ -30,11 +30,11 @@ public class CVsManager {
         this.cvs=new ArrayList<CV>();
 
     }
-    public ArrayList<CV> getListCV() {
+    public ArrayList<CV> getCVs() {
         return cvs;
     }
 
-    public void setListCV(ArrayList<CV> cvs) {
+    public void setcvs(ArrayList<CV> cvs) {
         this.cvs = cvs;
     }
 
