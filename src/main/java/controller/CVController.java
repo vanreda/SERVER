@@ -16,31 +16,31 @@ import java.util.ArrayList;
 @RequestMapping("/descvs")
 public class CVController {
 
-    private ArrayList<CV> listCV;
+    private ArrayList<CV> cvs;
 
     public CVController() {
-        listCV=new ArrayList<CV>();
+        cvs=new ArrayList<CV>();
         //------------------------------------------
         CV unCV=new CV();
         unCV.setTitre("Mr");
         unCV.setIdentite(new Personne("002255447", "saint aignant","JAI","Reda"));
-        this.listCV.add(unCV);
+        this.cvs.add(unCV);
 
         CV unCV2=new CV();
         unCV2.setTitre("Mr");
         unCV2.setIdentite(new Personne("00112233", "leinden","armin ","van buuren"));
-        this.listCV.add(unCV2);
+        this.cvs.add(unCV2);
 
         CV unCV3=new CV();
         unCV3.setTitre("Mr");
         unCV3.setIdentite(new Personne("44556677", "miami","markus ","schulz"));
-        this.listCV.add(unCV3);
+        this.cvs.add(unCV3);
 
 
         CV unCV4=new CV();
-        unCV3.setTitre("Mr");
-        unCV3.setIdentite(new Personne("88990011", "worclaw","indecent","noise"));
-        this.listCV.add(unCV4);
+        unCV4.setTitre("Mr");
+        unCV4.setIdentite(new Personne("88990011", "worclaw","indecent","noise"));
+        this.cvs.add(unCV4);
 
     }
 
@@ -53,7 +53,7 @@ public class CVController {
 
 
 
-        return this.listCV.get(id);
+        return this.cvs.get(id);
     }
 
 
@@ -64,13 +64,13 @@ public class CVController {
 
 
 
-        return new CVsManager(this.listCV);
+        return new CVsManager(this.cvs);
     }
 
     @RequestMapping(method = RequestMethod.POST)
     public @ResponseBody void insertCV(@RequestBody CV cv){
         //initArray();
-        this.listCV.add(cv);
+        this.cvs.add(cv);
 
     }
 
